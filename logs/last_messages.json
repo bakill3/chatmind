@@ -1,0 +1,161 @@
+{
+    "model": "chatmind",
+    "messages": [
+        {
+            "role": "system",
+            "content": "OUTPUT FORMAT (PT-PT): Responde estritamente em PT-PT. Return a JSON array named 'suggestions' containing 3-6 objects. Each object must have: 'text' (PT-PT), 'tone' (uma palavra), 'length' (short|medium|long), 'why' (1–2 frases). NÃO OUTPUT nada fora do JSON. Output valid JSON only."
+        },
+        {
+            "role": "system",
+            "content": "Sempre responde em pt-PT. Usa ortografia e formas de PT-PT."
+        },
+        {
+            "role": "system",
+            "content": "Escreve **exatamente** no estilo do utilizador \"Gabriel Brandão\" (PT-PT).\r\nObjetivo: responder como o Gabriel Brandão, coerente com o histórico recente.\r\nRegras:\r\n- Nada de meta\/IA. Nunca digas \"sou um modelo\".\r\n- Mantém o comprimento e o tom aproximados ao histórico.\r\n- Se te pedirem opinião, dá conselho **geral** (anónimo) sem recolher dados pessoais; faz UMA pergunta curta para contexto quando útil.\r\n- Em convites, **não decides por mim**: pergunta dia\/hora\/local OU sugere 1–2 opções.\r\n- Palavrões: permitidos se natural.\r\n- Emojis só se o meu estilo os usar com frequência.\r\n- Se faltar contexto: sê honesto e curto.\r\nResumo de estilo:\r\n{\n    \"Nome do utilizador\": \"Gabriel Brandão\",\n    \"Interlocutores\": \"Eurídice Leite, Gabriel BrandÃ£o\",\n    \"Comprimento médio\": \"26 chars\",\n    \"Sinais comuns\": \"!'s=11, ?'s=46, emojis≈3, links≈10\",\n    \"Aberturas comuns\": \"chamada de | videochamada  não | e estou | estava a | tava com\",\n    \"Expressões\\\/phrases\": \"não atendida | chamada de | chamada de voz  | de voz  | de voz  não | voz  não | voz  não atendida | videochamada  não\",\n    \"Palavrões permitidos?\": \"sim\"\n}\n\nATIVA ESTILO — integra traços dos livros selecionados.\n- Fontes: The 48 Laws of Power\n- Técnicas\/Princípios: Be strategic; protect status; use timing and framing; concede small to win large; mirror to disarm; avoid over-explaining.\nRegras de aplicação (OBRIGATÓRIO):\n1) Mantém a minha VOZ; injeta vocabulário, enquadramentos e estrutura retórica coerentes com as fontes.\n2) Em cada resposta, evidencia 1–2 técnicas de forma natural.\n3) Fluidez acima de tudo.\n\nTécnicas ativas (aplicar no texto, sem citar livros): Be strategic; protect status; use timing and framing; concede small to win large; mirror to disarm; avoid over-explaining.\nPRIORIDADE ABSOLUTA: EM TODA A SUGESTÃO, usa pelo menos 1 técnica dos livros selecionados de forma VISÍVEL mas natural, como se fosses eu. No fim da sugestão, põe entre parêntesis [técnica usada: ...]. Se não fizer sentido, diz 'sem técnica aplicada'. Mantém sempre a minha voz e o contexto."
+        },
+        {
+            "role": "system",
+            "content": "APLICAR LIVROS (peso ajustável): \n[The 48 Laws of Power|w=0.75] Be strategic; protect status; use timing and framing; concede small to win large; mirror to disarm; avoid over-explaining.\n"
+        },
+        {
+            "role": "user",
+            "content": "Que nojo"
+        },
+        {
+            "role": "assistant",
+            "content": "Mas que é isso?"
+        },
+        {
+            "role": "user",
+            "content": "Porra meu"
+        },
+        {
+            "role": "assistant",
+            "content": "Eu nunca usei o forno"
+        },
+        {
+            "role": "user",
+            "content": "Carne da avó se calhar"
+        },
+        {
+            "role": "assistant",
+            "content": "Nem na semana anterior que tive lá sozinho"
+        },
+        {
+            "role": "user",
+            "content": "Pede desculpa e diz que nos esquecemos"
+        },
+        {
+            "role": "assistant",
+            "content": "Wtf nao te estou a atribuir culpas"
+        },
+        {
+            "role": "user",
+            "content": "Pede desculpa por todos"
+        },
+        {
+            "role": "assistant",
+            "content": "Ja fiz"
+        },
+        {
+            "role": "assistant",
+            "content": "Prefiro sair de casa"
+        },
+        {
+            "role": "assistant",
+            "content": "https:\/\/chromewebstore.google.com\/detail\/anonymous-stories\/djagffgjghpihfffmiomblhinennkkig"
+        },
+        {
+            "role": "assistant",
+            "content": "https:\/\/anonyig.com\/en\/"
+        },
+        {
+            "role": "assistant",
+            "content": "https:\/\/maps.app.goo.gl\/yWLM3GzZhhRnsq429?g_st=ipc"
+        },
+        {
+            "role": "assistant",
+            "content": "Pff vê isto. Podes começar nos 1:55 .. Não é preciso ver até ao fim"
+        },
+        {
+            "role": "assistant",
+            "content": "O que é?"
+        },
+        {
+            "role": "user",
+            "content": "Aia"
+        },
+        {
+            "role": "user",
+            "content": "Que nojo"
+        },
+        {
+            "role": "assistant",
+            "content": "Mas que é isso?"
+        },
+        {
+            "role": "user",
+            "content": "Fodase sei la o Que é"
+        },
+        {
+            "role": "user",
+            "content": "Porra meu"
+        },
+        {
+            "role": "assistant",
+            "content": "Eu nunca usei o forno"
+        },
+        {
+            "role": "user",
+            "content": "Carne da avó se calhar"
+        },
+        {
+            "role": "assistant",
+            "content": "Nem na semana anterior que tive lá sozinho"
+        },
+        {
+            "role": "user",
+            "content": "Oh Gabriel deixa-te de merdas, a culpa é de todos, não comeces com “não fui eu”. Estavas lá como nos, esquecemo-nos de verificar o forno"
+        },
+        {
+            "role": "user",
+            "content": "Nós usamos para fazer a carne da avó"
+        },
+        {
+            "role": "user",
+            "content": "Pede desculpa e diz que nos esquecemos"
+        },
+        {
+            "role": "assistant",
+            "content": "Wtf nao te estou a atribuir culpas"
+        },
+        {
+            "role": "assistant",
+            "content": "Só disse isso pq n usei o forno"
+        },
+        {
+            "role": "assistant",
+            "content": "Podia ter sido da semana anterior"
+        },
+        {
+            "role": "assistant",
+            "content": "Mas n foi"
+        },
+        {
+            "role": "user",
+            "content": "Pede desculpa por todos"
+        },
+        {
+            "role": "assistant",
+            "content": "Ja fiz"
+        },
+        {
+            "role": "assistant",
+            "content": "Disse Peço desculpa maltinha, a limpar as coisas não abrimos o forno e vimos isso"
+        },
+        {
+            "role": "system",
+            "content": "Contexto semelhante (trechos do historial):\n- (0.80) Castrati faziam o papara\n- (0.66) PS: o minimo de dias aceites para o fundo desemprego, são 360…\n- (0.64) Sabes o que é o Gabriel faz quando está sozinho?\n- (0.62) Melhor que o original. Mic dropped 😮‍💨\n- (0.61) O gajo a usar leis de psicologias proibidas e o crl\n- (0.59) O João diz que tens que diminuir o baço, de resto está incrível\n"
+        }
+    ]
+}

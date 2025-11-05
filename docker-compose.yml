@@ -1,0 +1,51 @@
+services:
+  db:
+    image: mariadb:10.11
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: chatmind
+      MARIADB_ROOT_HOST: '%'
+      MARIADB_ALLOW_EMPTY_ROOT_PASSWORD: 'no'
+      MARIADB_USER: admin
+      MARIADB_PASSWORD: adminpass
+    volumes:
+      - db_data:/var/lib/mysql
+
+  web:
+    build: ./docker/php
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    volumes:
+      - ./:/var/www/html:cached
+      - ./uploads:/var/www/html/uploads
+      - ./llama:/var/www/html/llama:ro
+    environment:
+      - DB_HOST=db
+      - DB_NAME=chatmind
+      - DB_USER=root
+      - DB_PASS=example
+      - LLAMA_API_URL=http://host.docker.internal:8080/v1/chat/completions
+      - LLAMA_MODEL_ID=chatmind
+      - QUICK_MODEL_ALIAS=chatmind-mini
+    # Harden host resolution in case Docker Desktop ever fails to inject it
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: unless-stopped
+    ports:
+      - "8082:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: example
+    depends_on:
+      - db
+
+volumes:
+  db_data:
